@@ -1,6 +1,6 @@
 /****************************************************************************
  Title	:   Serial library
- company: www.digitlabz.com
+
  File:	    lcd
  Software:  AVR-GCC 3.3 
  Target:    any AVR device
