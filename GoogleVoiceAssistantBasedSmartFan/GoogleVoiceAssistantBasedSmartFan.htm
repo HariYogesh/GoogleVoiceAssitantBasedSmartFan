@@ -1,0 +1,26 @@
+<html>
+	<head>
+	</head>
+<body>
+
+
+
+
+
+<script src='http://api.clobous.com/assets/js/jquery-2.1.4.min.js' type='text/javascript'></script>
+<script src='http://api.clobous.com/assets/js/clobousiot.js' type='text/javascript'></script>
+<script>
+	$(document).ready(function () {
+		 var deviceId = 'M03286';
+		map_init('googleMap', deviceId);
+		map_plot();
+		data_update(deviceId);
+		setInterval(function () {
+ 			data_retrieve(deviceId,function (response) {
+				extract_value(response, 'sen1', 'lblTemp');
+			})
+		},2000);
+ });
+</script>
+</body>
+</html>
